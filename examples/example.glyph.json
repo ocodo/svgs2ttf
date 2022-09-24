@@ -1,0 +1,1 @@
+    "0x${UNICODE_HEX}": { "src": "${SVG_FILE}", "width": ${WIDTH} },

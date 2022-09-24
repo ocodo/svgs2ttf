@@ -1,32 +1,27 @@
 { "props":
-  { "ascent": 96
-  , "descent": 32
-  , "em": 128
+  { "ascent": ${ASCENT}
+  , "descent": ${DESCENT}
+  , "em": ${EM}
   , "encoding": "UnicodeFull"
   , "lang": "English (US)"
-  , "family": "Example"
+  , "family": "${FONTNAME}"
   , "style": "Regular"
-  , "familyname": "Example"
-  , "fontname": "Example-Regular"
-  , "fullname": "Example Regular"
+  , "familyname": "${FONTNAME}"
+  , "fontname": "${FONTNAME}-Regular"
+  , "fullname": "${FONTNAME} Regular"
   }
 , "glyphs":
-  { "0x3f": { "src": "question.svg", "width": 128 }
-  , "0xab": { "src": "back.svg", "width": 128 }
-  , "0x263a": ""
-  , "0x2723": "overlap-test.svg"
-  , "0x1f304": "outline-test.svg"
+  { ${GLYPHS}
   }
 , "sfnt_names":
-  [ ["English (US)", "Copyright", "Copyright (c) 2014 by Nobody"]
-  , ["English (US)", "Family", "Example"]
+  [ ["English (US)", "Copyright", "Copyright (c) ${COPYRIGHT}"]
+  , ["English (US)", "Family", "${FONTNAME}"]
   , ["English (US)", "SubFamily", "Regular"]
-  , ["English (US)", "UniqueID", "Example 2014-12-04"]
-  , ["English (US)", "Fullname", "Example Regular"]
-  , ["English (US)", "Version", "Version 001.000"]
-  , ["English (US)", "PostScriptName", "Example-Regular"]
+  , ["English (US)", "UniqueID", "${FONTNAME} ${FONTDATE}"]
+  , ["English (US)", "Fullname", "${FONTNAME} Regular"]
+  , ["English (US)", "Version", "Version ${FONTVERSION}"]
+  , ["English (US)", "PostScriptName", "${FONTNAME}-Regular"]
   ]
 , "input": "."
-, "output": [ "example.ttf", "example.svg", "example.woff" ]
-, "# vim: set et sw=2 ts=2 sts=2:": false
+  , "output": [ "${FONTNAME}-Regular.ttf", "${FONTNAME}-Regular.svg", "${FONTNAME}-Regular.woff" ]
 }
