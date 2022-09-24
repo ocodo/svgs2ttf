@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# 1. Read dir $1 of svg file (glyphs)
+# 2. Names should be alpha sorted
+# 3. Assume same glyph width $2
+# 4. Assume unicode series starts at $3
+# 5. Template font-glyph.json.template
+# 6. Insert glyphs string via  main template + metadata
+
+WIDTH=$2
+UNICODE=$3
+for a in $1/*svg
+do
+GLYPH_NAME=$(basename "$a")
+UNICODE
